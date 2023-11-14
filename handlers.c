@@ -110,8 +110,8 @@ int write_num(int ind, char buffer[],
 	if (width > length)
 	{
 		for (f = 1; f < width - length + 1; f++)
-			buffer[i] = put;
-		buffer[i] = '\0';
+			buffer[f] = put;
+		buffer[f] = '\0';
 		if (flags & F_MINUS && put == ' ')/* Asign extra char to left of buffer */
 		{
 			if (extra_c)
@@ -216,8 +216,8 @@ int write_pointer(char buffer[], int ind, int length,
 	if (width > length)
 	{
 		for (f = 3; f < width - length + 3; f++)
-			buffer[i] = put;
-		buffer[i] = '\0';
+			buffer[f] = put;
+		buffer[f] = '\0';
 		if (flags & F_MINUS && put == ' ')/* Asigns extra char to left of buffer */
 		{
 			buffer[--ind] = 'x';

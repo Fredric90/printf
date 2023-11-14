@@ -15,7 +15,7 @@ int width(const char *format, int *f, va_list list)
 
 	for (curr_f = *f + 1; format[curr_f] != '\0'; curr_f++)
 	{
-		if (is_digit(format[curr_f]))
+		if (u_digit(format[curr_f]))
 		{
 			width *= 10;
 			width += format[curr_f] - '0';

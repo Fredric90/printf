@@ -20,7 +20,7 @@ int precision(const char *format, int *f, va_list list)
 
 	for (curr_f += 1; format[curr_f] != '\0'; curr_f++)
 	{
-		if (is_digit(format[curr_f]))
+		if (u_digit(format[curr_f]))
 		{
 			precision *= 10;
 			precision += format[curr_f] - '0';
@@ -38,4 +38,4 @@ int precision(const char *format, int *f, va_list list)
 	*f = curr_f - 1;
 
 	return (precision);
-f}
+}
